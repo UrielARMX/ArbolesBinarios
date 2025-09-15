@@ -49,5 +49,23 @@ namespace _01_Arboles_Binarios
                 return temporal;
             }
         }
+
+        public void TransversaPreO(Nodo nodo)
+        {
+            if (nodo == null) return;
+
+            for (int n = 0; n < i; n++) Console.Write(" ");
+
+            Console.WriteLine(nodo.Dato);
+
+            if (nodo.Hijo != null)
+            {
+                i++;
+                TransversaPreO(nodo.Hijo);
+                i--;
+            }
+
+            if (nodo.Hermano != null) TransversaPreO(nodo.Hermano);
+        }
     }
 }
