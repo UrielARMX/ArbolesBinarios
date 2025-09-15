@@ -26,7 +26,7 @@ namespace _01_Arboles_Binarios
 
                 return Raiz;
             }
-            else if (nodo.Hijo != null)
+            else if (nodo.Hijo == null)
             {
                 Nodo temporal = new Nodo();
                 temporal.Dato = dato;
@@ -44,7 +44,7 @@ namespace _01_Arboles_Binarios
                 Nodo temporal = new Nodo();
                 temporal.Dato = dato;
 
-                nodo.Hermano = temporal;
+                Actual.Hermano = temporal;
 
                 return temporal;
             }
