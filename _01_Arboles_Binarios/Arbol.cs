@@ -94,20 +94,22 @@ namespace _01_Arboles_Binarios
 
             if (nodo.Dato.CompareTo(dato) == 0)
             {
-                Encotrado = nodo.Hijo;
+                Encotrado = nodo;
                 return Encotrado;
             }
 
             if (nodo.Hijo != null)
             {
                 Encotrado = Buscar(dato, nodo.Hijo);
-                return Encotrado;
+                
+                if(Encotrado != null) return Encotrado;
             }
 
             if (nodo.Hermano != null)
             {
                 Encotrado = Buscar(dato, nodo.Hermano);
-                return Encotrado;
+
+                if (Encotrado != null) return Encotrado;
             }
 
             return Encotrado;

@@ -35,6 +35,14 @@ namespace _01_Arboles_Binarios
             Console.WriteLine("========");
 
             arbol.TransversaPostO(raiz);
+
+            Console.Write("Ingrese el dato del nodo a buscar: ");
+            string dato = Console.ReadLine();
+
+            Nodo Encontrado = arbol.Buscar(dato, raiz);
+
+            if (Encontrado != null) Console.WriteLine("El dato a buscar SI se encuentra en el Arbol!");
+            else Console.WriteLine("El dato a buscar NO se encuentra en el Arbol!");
         }
     }
 }
