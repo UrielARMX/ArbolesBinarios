@@ -31,6 +31,10 @@ namespace _01_Arboles_Binarios
             arbol.InsertarNodo("n", nuevo);
 
             arbol.TransversaPreO(raiz);
+
+            Console.WriteLine("========");
+
+            arbol.TransversaPostO(raiz);
         }
     }
 }

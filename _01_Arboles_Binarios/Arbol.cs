@@ -67,5 +67,23 @@ namespace _01_Arboles_Binarios
 
             if (nodo.Hermano != null) TransversaPreO(nodo.Hermano);
         }
+
+        public void TransversaPostO(Nodo nodo)
+        {
+            if (nodo == null) return;
+
+            if (nodo.Hijo != null)
+            {
+                i++;
+                TransversaPostO(nodo.Hijo);
+                i--;
+            }
+
+            if (nodo.Hermano != null) TransversaPostO(nodo.Hermano);
+
+            for (int n = 0; n < i; n++) Console.Write(" ");
+
+            Console.WriteLine(nodo.Dato);
+        }
     }
 }
