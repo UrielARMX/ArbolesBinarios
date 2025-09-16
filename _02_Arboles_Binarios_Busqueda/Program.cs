@@ -33,6 +33,8 @@ namespace _02_Arboles_Binarios_Busqueda
             Console.WriteLine("\n======");
 
             arbol.TransversaPostO(raiz);
+
+            Console.WriteLine("\nEl dato menor del arbol es: " + arbol.BuscarMenor(raiz));
         }
     }
 }
