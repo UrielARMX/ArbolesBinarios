@@ -25,6 +25,10 @@ namespace _02_Arboles_Binarios_Busqueda
             arbol.InsertarNodo(14, raiz);
 
             arbol.TransversaPreO(raiz);
+
+            Console.WriteLine("======");
+
+            arbol.TransversaInO(raiz);
         }
     }
 }
