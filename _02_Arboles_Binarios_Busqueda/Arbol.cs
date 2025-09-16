@@ -81,5 +81,28 @@ namespace _02_Arboles_Binarios_Busqueda
                // i--;
             }
         }
+
+        public void TransversaPostO(Nodo nodo)
+        {
+            if (nodo == null) return;
+
+            if (nodo.Izq != null)
+            {
+                //i++;
+                TransversaPostO(nodo.Izq);
+                //i--;
+            }
+
+            if (nodo.Der != null)
+            {
+                // i++;
+                TransversaPostO(nodo.Der);
+                // i--;
+            }
+
+            for (int n = 0; n < i; n++) Console.Write(" ");
+
+            Console.Write(nodo.Dato + " ");
+        }
     }
 }
