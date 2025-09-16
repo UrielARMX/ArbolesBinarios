@@ -138,5 +138,26 @@ namespace _02_Arboles_Binarios_Busqueda
 
             return mayor;
         }
+
+        public Nodo BuscarPadre(int dato, Nodo nodo)
+        {
+            Nodo Padre = null;
+
+            if (nodo == null) return null;
+
+            if (nodo.Izq != null)
+                if (nodo.Izq.Dato == dato)
+                    return nodo;
+
+            if (nodo.Der != null)
+                if (nodo.Der.Dato == dato)
+                    return nodo;
+
+            if (nodo.Izq != null && dato < nodo.Dato) Padre = BuscarPadre(dato, nodo.Izq);
+
+            if (nodo.Der != null && dato > nodo.Dato) Padre = BuscarPadre(dato, nodo.Der);
+
+            return Padre;
+        }
     }
 }
