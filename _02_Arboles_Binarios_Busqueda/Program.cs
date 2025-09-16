@@ -35,6 +35,8 @@ namespace _02_Arboles_Binarios_Busqueda
             arbol.TransversaPostO(raiz);
 
             Console.WriteLine("\nEl dato menor del arbol es: " + arbol.BuscarMenor(raiz));
+
+            Console.WriteLine("El dato mayor del arbol es: " + arbol.BuscarMayor(raiz));
         }
     }
 }
