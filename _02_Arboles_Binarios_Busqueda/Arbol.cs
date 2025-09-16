@@ -33,5 +33,30 @@ namespace _02_Arboles_Binarios_Busqueda
 
             return nodo;
         }
+
+        public void TransversaPreO(Nodo nodo)
+        {
+            if (nodo == null) return;
+
+            for (int n = 0; n < i; n++) Console.Write(" ");
+
+            Console.WriteLine(nodo.Dato);
+
+            if (nodo.Izq != null)
+            {
+                i++;
+                Console.Write("I: ");
+                TransversaPreO(nodo.Izq);
+                i--;
+            }
+
+            if (nodo.Der != null)
+            {
+                i++;
+                Console.Write("D: ");
+                TransversaPreO(nodo.Der);
+                i--;
+            }
+        }
     }
 }
