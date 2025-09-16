@@ -43,6 +43,23 @@ namespace _01_Arboles_Binarios
 
             if (Encontrado != null) Console.WriteLine("El dato a buscar SI se encuentra en el Arbol!");
             else Console.WriteLine("El dato a buscar NO se encuentra en el Arbol!");
+
+
+            Console.Write("Ingrese el nodo donde se insertara el dato: ");
+            string datoBuscar = Console.ReadLine();
+
+            Encontrado = arbol.Buscar(datoBuscar, raiz);
+
+            if (Encontrado != null)
+            {
+                Console.Write("Ingrese un dato a insertar: ");
+                dato = Console.ReadLine();
+
+                nuevo = arbol.InsertarNodo(dato, Encontrado);
+            }
+            else Console.WriteLine("El nodo NO se encuentra en el arbol");
+
+            arbol.TransversaPreO(raiz);
         }
     }
 }
