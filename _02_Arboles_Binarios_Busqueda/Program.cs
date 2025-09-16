@@ -30,7 +30,7 @@ namespace _02_Arboles_Binarios_Busqueda
 
             arbol.TransversaInO(raiz);
 
-            Console.WriteLine("======");
+            Console.WriteLine("\n======");
 
             arbol.TransversaPostO(raiz);
         }

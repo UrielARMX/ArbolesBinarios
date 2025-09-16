@@ -104,5 +104,22 @@ namespace _02_Arboles_Binarios_Busqueda
 
             Console.Write(nodo.Dato + " ");
         }
+
+        public int BuscarMenor(Nodo nodo)
+        {
+            if (nodo == null) return 0;
+
+            Actual = nodo;
+
+            int menor = Actual.Dato;
+
+            while (Actual.Izq != null)
+            {
+                Actual = Actual.Izq;
+                menor = Actual.Dato;
+            }
+
+            return menor;
+        }
     }
 }
