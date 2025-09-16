@@ -85,5 +85,32 @@ namespace _01_Arboles_Binarios
 
             Console.WriteLine(nodo.Dato);
         }
+
+        public Nodo Buscar(string dato, Nodo nodo)
+        {
+            Nodo Encotrado = null;
+
+            if (nodo == null) return Encotrado;
+
+            if (nodo.Dato.CompareTo(dato) == 0)
+            {
+                Encotrado = nodo.Hijo;
+                return Encotrado;
+            }
+
+            if (nodo.Hijo != null)
+            {
+                Encotrado = Buscar(dato, nodo.Hijo);
+                return Encotrado;
+            }
+
+            if (nodo.Hermano != null)
+            {
+                Encotrado = Buscar(dato, nodo.Hermano);
+                return Encotrado;
+            }
+
+            return Encotrado;
+        }
     }
 }
