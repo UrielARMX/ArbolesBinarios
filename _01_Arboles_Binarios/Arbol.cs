@@ -88,31 +88,31 @@ namespace _01_Arboles_Binarios
 
         public Nodo Buscar(string dato, Nodo nodo)
         {
-            Nodo Encotrado = null;
+            Nodo Encontrado = null;
 
-            if (nodo == null) return Encotrado;
+            if (nodo == null) return Encontrado;
 
             if (nodo.Dato.CompareTo(dato) == 0)
             {
-                Encotrado = nodo;
-                return Encotrado;
+                Encontrado = nodo;
+                return Encontrado;
             }
 
             if (nodo.Hijo != null)
             {
-                Encotrado = Buscar(dato, nodo.Hijo);
+                Encontrado = Buscar(dato, nodo.Hijo);
                 
-                if(Encotrado != null) return Encotrado;
+                if(Encontrado != null) return Encontrado;
             }
 
             if (nodo.Hermano != null)
             {
-                Encotrado = Buscar(dato, nodo.Hermano);
+                Encontrado = Buscar(dato, nodo.Hermano);
 
-                if (Encotrado != null) return Encotrado;
+                if (Encontrado != null) return Encontrado;
             }
 
-            return Encotrado;
+            return Encontrado;
         }
     }
 }
