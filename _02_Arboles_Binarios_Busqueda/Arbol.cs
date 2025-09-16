@@ -65,23 +65,21 @@ namespace _02_Arboles_Binarios_Busqueda
 
             if (nodo.Izq != null)
             {
-                i++;
-                Console.Write("I: ");
+                //i++;
                 TransversaInO(nodo.Izq);
-                i--;
-            }
-
-            if (nodo.Der != null)
-            {
-                i++;
-                Console.Write("D: ");
-                TransversaInO(nodo.Der);
-                i--;
+                //i--;
             }
 
             for (int n = 0; n < i; n++) Console.Write(" ");
 
-            Console.WriteLine(nodo.Dato);
+            Console.Write(nodo.Dato + " ");
+
+            if (nodo.Der != null)
+            {
+               // i++;
+                TransversaInO(nodo.Der);
+               // i--;
+            }
         }
     }
 }
