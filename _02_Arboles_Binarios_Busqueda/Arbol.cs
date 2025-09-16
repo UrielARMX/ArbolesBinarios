@@ -121,5 +121,22 @@ namespace _02_Arboles_Binarios_Busqueda
 
             return menor;
         }
+
+        public int BuscarMayor(Nodo nodo)
+        {
+            if (nodo == null) return 0;
+
+            Actual = nodo;
+
+            int mayor = Actual.Dato;
+
+            while (Actual.Der != null)
+            {
+                Actual = Actual.Der;
+                mayor = Actual.Dato;
+            }
+
+            return mayor;
+        }
     }
 }
